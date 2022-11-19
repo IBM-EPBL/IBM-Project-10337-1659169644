@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+<style>
+    body {
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      background: url('https://www.lendingkart.com/wp-content/uploads/2021/08/Inventory.jpg') !important ;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    </style><br><br><br><br><br>
+<div class="jumbotron mt-4">
+
+    <h7 class="display-4"><font size="8"
+        face="verdana"
+         color="black">Welcome to,<p style="text-align:center"><br>Inventory Management System for Retailers</p></font></h7>
+</div>
+{% if session.logged_in == NULL %}
+        <center><a href="/register" class="btn btn-danger btn-lg">Register</a>
+        <a href="/login" class="btn btn-success btn-lg">Login</a></center>
+    {% endif %}<br>
+{% endblock %}
